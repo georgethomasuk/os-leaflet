@@ -68,8 +68,10 @@
         apiUrl = 'file:///';
       }
 
+      var tileServer = options.tileServer || 'https://openspace.ordnancesurvey.co.uk/osmapapi/ts';
+
       L.TileLayer.WMS.prototype.initialize.call(this,
-        'https://openspace.ordnancesurvey.co.uk/osmapapi/ts', {
+        tileServer, {
           crs: L.OSOpenSpace.CRS,
           maxZoom: 14,
           minZoom: 0,
